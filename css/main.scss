@@ -17,7 +17,6 @@ body {
 /* Opaque Navbar on Scroll */
 .navbar {
   @include transition(all 0.25s ease-out);
-
   &.navbar-inverse {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   }
@@ -73,9 +72,8 @@ body {
       margin: 0;
     }
 
-    h3 {
-      font-size: 2.25em;
-      margin: 10px 0;
+    h4 {
+      margin: -10px 0;
     }
 
     .btn {
