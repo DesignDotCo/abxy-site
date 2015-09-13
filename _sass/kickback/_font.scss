@@ -1,18 +1,18 @@
-/* Kickback Logo Webfont (c) 2015 Kickback, LLC. All rights reserved. */
+/* ABXY Logo Webfont (c) 2015 Kickback, LLC. All rights reserved. */
 
 @font-face {
-  font-family: 'kickback';
-  src: url('../fonts/kickback.eot');
-  src: url('../fonts/kickback.eot#iefix') format('embedded-opentype'),
-       url('../fonts/kickback.woff') format('woff'),
-       url('../fonts/kickback.ttf') format('truetype'),
-       url('../fonts/kickback.svg#kickback') format('svg');
+  font-family: 'abxy';
+  src: url('../fonts/abxy.eot');
+  src: url('../fonts/abxy.eot#iefix') format('embedded-opentype'),
+       url('../fonts/abxy.woff') format('woff'),
+       url('../fonts/abxy.ttf') format('truetype'),
+       url('../fonts/abxy.svg#abxy') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="kickback-"], [class*=" kickback-"] {
-  font-family: 'kickback';
+[class^="abxy-"], [class*=" abxy-"] {
+  font-family: 'abxy';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -25,10 +25,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.kickback-icon:before {
-  content: "\e600";
+.abxy-full .path1:before {
+	content: "\e600";
+	color: rgb(42, 194, 243);
 }
-
-.kickback-full:before {
-  content: "\e601";
+.abxy-full .path2:before {
+	content: "\e601";
+	margin-left: -1.9912109375em;
+	color: rgb(240, 209, 65);
+}
+.abxy-full .path3:before {
+	content: "\e602";
+	margin-left: -1.9912109375em;
+	color: rgb(252, 71, 68);
+}
+.abxy-full .path4:before {
+	content: "\e603";
+	margin-left: -1.9912109375em;
+	color: rgb(114, 217, 24);
+}
+.abxy-icon .path1:before {
+	content: "\e604";
+	color: rgb(114, 217, 24);
+}
+.abxy-icon .path2:before {
+	content: "\e605";
+	margin-left: -1em;
+	color: rgb(252, 71, 68);
+}
+.abxy-icon .path3:before {
+	content: "\e606";
+	margin-left: -1em;
+	color: rgb(42, 194, 243);
+}
+.abxy-icon .path4:before {
+	content: "\e607";
+	margin-left: -1em;
+	color: rgb(240, 209, 65);
 }
