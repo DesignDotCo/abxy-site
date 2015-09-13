@@ -18,8 +18,15 @@ body {
 .navbar {
   @include transition(all 0.25s ease-out);
   &.navbar-inverse {
+    background-color: darken(#2AC2F3, 14%);
+    border-color: darken(#2AC2F3, 14%);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   }
+}
+
+.navbar-toggle {
+  border: 0;
+  background-color: darken(#2AC2F3, 12%);
 }
 
 /* Static Footer */
@@ -160,7 +167,6 @@ body {
     padding-bottom: 8%;
 
     @include transition(all 0.1s ease-out);
-
     .stats {
       padding: 0 40px;
       background-color: transparent;
@@ -198,13 +204,14 @@ body {
     }
 
     thead .kickback {
-      background: $brand-primary;
+      background: lighten(#282D3C, 3%);
       color: #fff;
       font-weight: bold;
+      width: 150px;
     }
 
     tbody .kickback {
-      background: darken($brand-primary, 10%);
+      background: darken(#282D3C, 3%);
       color: #fff;
       font-weight: bold;
     }
