@@ -1,6 +1,11 @@
 ---
 ---
 
+$blue: #2AC2F3;
+$yellow: #F0D141;
+$red: #FC4744;
+$green: #72D918;
+
 @import "kickback/variables";
 @import "bootstrap";
 @import "kickback/bootswatch";
@@ -8,6 +13,22 @@
 @import "kickback/font";
 
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+
+.blue {
+  color: $blue;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.red {
+  color: $red;
+}
+
+.green {
+  color: $green;
+}
 
 body {
   margin-top: 80px;
@@ -18,15 +39,24 @@ body {
 .navbar {
   @include transition(all 0.25s ease-out);
   &.navbar-inverse {
-    background-color: darken(#2AC2F3, 14%);
-    border-color: darken(#2AC2F3, 14%);
+    background-color: $brand-primary;
+    border-color: $brand-primary;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    .navbar-nav a:hover {
+      background: darken($brand-primary, 2%);
+    }
   }
 }
 
+.abxy-full {
+  font-size: 300%;
+} 
+
 .navbar-toggle {
   border: 0;
-  background-color: darken(#2AC2F3, 12%);
+  .icon-bar {
+    background-color: #fff;
+  }
 }
 
 /* Static Footer */
@@ -44,67 +74,68 @@ body {
 /* Page Headers with Background */
 .header {
   margin-top: -80px;
-  margin-bottom: 20px;
-
   text-align: center;
-
-  background: $brand-primary no-repeat center center;
   background-size: cover;
+  height: 100%;
   color: #f8f8f8;
-
 	h1, h2, h3, h4, h5 {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
-
-  .container {
-    position: relative;
-    padding-top: 15%;
-    padding-bottom: 15%;
-  }
-
+  
+.container {
+  position: relative;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+  
   &.header-sm {
     .container {
       padding-top: 5%;
       padding-bottom: 5%;
     }
   }
-
   &.header-index {
-    margin-bottom: 0;
-
-  	background-image: url(../images/bgs/index.jpg?git={{ site.github.build_revision }});
-
+    position: relative;
+    height: 100% !important;
+    width: 100% !important;
+    background-attachment: fixed;
     h1 {
       font-size: 4em;
-      margin: 0;
+      margin-top: 100px;
     }
-
     h4 {
       margin: -10px 0;
+      font-size: 175%;
     }
-
     .btn {
       margin: 10px auto 0 auto;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
     }
+    video { 
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+         -moz-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
+      transition: 1s opacity;
   }
-
+}
   &.header-jobs {
     background-image: url(../images/bgs/jobs.jpg?git={{ site.github.build_revision }});
   }
-
   &.header-compare {
     background-image: url(../images/bgs/compare.jpg?git={{ site.github.build_revision }});
   }
-
-  &.header-about {
-    background-image: url(../images/bgs/about.jpg?git={{ site.github.build_revision }});
+  &.header.header.header-about {
+    background-size: contain;
+    background: linear-gradient(rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.7)), url(../images/bgs/about.jpg) no-repeat fixed center;
   }
-
-  &.header-networks {
-    background-image: url(../images/bgs/networks.jpg?git={{ site.github.build_revision }});
-  }
-
 }
 
 
@@ -112,11 +143,9 @@ body {
 .lead-line {
   text-align: center;
   color: #fff;
-
-  background-color: darken($brand-primary, 10%);
-
+  background-color: $brand-primary;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-
+  height: 13 0px;
   h2 {
     margin: 4% 0;
   }
@@ -197,21 +226,20 @@ body {
         padding: 10px;
         height: 90px;
       }
-
-      .kickback img {
-        height: 50px;
+      .abxy-full {
+        background: lighten(#1F1F1F, 3%);
       }
     }
 
     thead .kickback {
-      background: lighten(#282D3C, 3%);
+      background: lighten(#1F1F1F, 3%);
       color: #fff;
       font-weight: bold;
-      width: 150px;
+      width: 170px;
     }
 
     tbody .kickback {
-      background: darken(#282D3C, 3%);
+      background: darken(#1F1F1F, 3%);
       color: #fff;
       font-weight: bold;
     }
@@ -255,7 +283,10 @@ body {
 
 /* About Page */
 .about {
+  margin: 35px 0 75px 0;
   p {
+    margin: 15px auto;
+    width: 800px;
     font-size: 18px;
   }
 }
